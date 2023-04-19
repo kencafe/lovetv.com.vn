@@ -1,0 +1,20 @@
+CREATE TABLE `[[is_tables_name]]` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `shortcode` int(5) DEFAULT NULL COMMENT 'Đầu số gửi tin',
+  `msisdn` varchar(20) DEFAULT NULL,
+  `mo` varchar(127) DEFAULT NULL,
+  `mt` varchar(1023) DEFAULT NULL,
+  `note` varchar(127) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL COMMENT '0: gửi thành công (gọi sang anh Văn và được trả về thành công), 1: gửi không thành công, 2: lỗi',
+  `day` int(10) unsigned DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `sub_code` varchar(127) DEFAULT NULL,
+  `response` varchar(511) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `msisdn` (`msisdn`),
+  KEY `mo` (`mo`),
+  KEY `status` (`status`),
+  KEY `day` (`day`),
+  KEY `created_at` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;

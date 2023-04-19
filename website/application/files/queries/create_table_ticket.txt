@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS `[[is_tables_name]]` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ticketId` varchar(36) NOT NULL COMMENT 'ID của Ticket, YmdHis + random 6 số',
+  `serviceId` varchar(36) NOT NULL COMMENT 'Mã dịch vụ',
+  `packageId` varchar(36) NOT NULL COMMENT 'Gói cước',
+  `commandId` varchar(36) NOT NULL COMMENT 'Mã lệnh',
+  `msisdn` varchar(36) NOT NULL COMMENT 'SĐT đăng ký',
+  `channel` varchar(36) NOT NULL COMMENT 'Kênh đăng ký',
+  `status` tinyint(1) NOT NULL COMMENT 'Trạng thái: 0 = Mới tạo, 1: Đã sử dụng',
+  `state` tinyint(1) NOT NULL COMMENT 'Nguồn phát sinh Ticket: 0: Đăng ký dịch vụ',
+  `data` text NOT NULL COMMENT 'Dữ liệu đăng ký',
+  `expireTime` datetime DEFAULT NULL COMMENT 'Thời gian hết hạn của vé',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `logs` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ticketId` (`ticketId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Ticket for Register';

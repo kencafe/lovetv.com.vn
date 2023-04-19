@@ -1,0 +1,93 @@
+
+/* hoidap css */
+/* body */
+h3{
+    font-size: 20px;
+    color: #0A246A;
+}
+#main{
+    width: 100%;
+    float: left;
+    border-radius: 4px;
+    font-family: 'Verdana';
+    font-size: 15px;
+    box-shadow: 10px 10px 10px;
+}
+
+.sidebar{
+    background-color: #ccc;
+    /* min-height: 400px; */
+}
+
+#main div#main {
+    text-align: left;
+    box-shadow: 10px 10px 10px;
+    bottom: 10px;
+}
+#main div#main h3{
+    color: #CA4622;
+}
+#main ul,.w3-padding{
+    padding-left: 40px;
+    list-style-type: circle;
+}
+#main ul li{
+    margin-bottom: 10px;
+}
+p.w3-large{
+    margin-bottom: 0px;
+}
+.w3-col .s6{
+    float: left;
+    margin-bottom: 20px;
+}
+.w3-col .s6:last-child{
+    float: right;
+}
+.w3-btn,.w3-button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+.w3-large{
+    font-size:18px!important;
+}
+.w3-text-white,.w3-hover-text-white:hover{
+    color:#fff!important
+}
+.w3-orange,.w3-hover-orange:hover{
+    color:#000!important;
+    background-color:#ff9800!important
+}
+.w3-orange:hover{
+    box-shadow:  5px 5px 4px #b7c1bb;
+}
+
+
+
+@media (max-width: 320px) {
+    #main{
+        font-size: 13px;
+        width: 100%;
+    }
+    .sidebar{
+        display: none;
+    }
+    .w3-padding {
+        padding-left: 0px;
+    }
+}
+@media (max-width: 768px) {
+    .w3-padding {
+        padding-left: 0px;
+    }
+}
+/* end body */

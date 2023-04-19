@@ -1,0 +1,344 @@
+/*Base style*/
+body {
+	font-family:Overlock;
+	font-size:14px;
+	margin:0;
+	padding:0;
+	overflow-y:scroll;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+a img {
+	border:none;
+}
+select {
+	height:24px;
+	margin-bottom:3px;
+}
+img,img a {
+	border:0;
+}
+img,video {
+	height:auto;
+	max-width:100%;
+}
+ul,ol {
+	margin: 0 0 10px 30px;
+}
+/*end Base style*/
+.mybr {
+	clear:both;
+	display:none;
+}
+.solid {
+	border-top:solid 1px #6f6753;
+	height:1px;
+}
+.alter {
+	background:#F4F4F4;
+	border-top:solid 1px #ebebeb;
+	border-bottom:solid 1px #ebebeb;
+}
+.clear,.Clear {
+	clear: both;
+}
+/*Hint box*/
+.icontip {
+	background:url(../Images/hinticon.gif) 0 0 no-repeat;
+	width:16px;
+	height:14px;
+	cursor: help;
+}
+#hintbox {
+	/*CSS for pop up hint box */
+	position:absolute;
+	top:0;
+	background-color:lightyellow;
+	width:auto;
+	/*Default width of hint.*/
+	padding:3px;
+	border:1px solid #999;
+	font:normal 11px tahoma;
+	line-height:18px;
+	z-index:100;
+	border-right:3px solid #999;
+	border-bottom:3px solid #999;
+	visibility:hidden;
+}
+.hintanchor {
+	/*CSS for link that shows hint onmouseover*/
+	font-weight:bold;
+	color:navy;
+	margin:3px 8px;
+}
+/*Hint box*/
+/*Image shadow*/
+.img_shadow {
+	float:left;
+	background: url(../Images/trans-shadow.png) no-repeat bottom right;
+}
+.img_shadow img {
+	display:block;
+	/* IE won't do well without this */
+	position:relative;
+	/* Make the shadow's position relative to its image */
+	background-color:#fff;
+	/* Background color of the border created by the padding */
+	margin:-4px 6px 6px -4px;
+	/* Offset the image by certain pixels to reveal the shadow,as the shadows are 6 pixels wide,offset it by that amount to get a perfect shadow */
+}
+/*Image none shadow*/
+.img_none_shadow {
+	float:left;
+}
+.img_none_shadow img {
+	margin: 0 3px 3px 0;
+}
+/*paging*/
+.paging {
+	display:block;
+	text-align:center;
+	height:22px;
+	line-height:21px;
+	clear:both;
+	font-size:12px;
+	font-weight:500;
+	margin:20px 0 0;
+	padding-top:20px;
+	border-top:1px solid #f5f5f5;
+}
+.paging .pleft {
+	float:left;
+	color:#000;
+}
+.paging .pright {
+	float:right;
+}
+.paging a,.noneclick {
+	background:url(../templates/tongiaocp/images/pagin-bg.html) 0 0 #fff repeat-x;
+	border:1px solid #BDBCBD;
+	padding:5px 10px;
+	font-weight:bold;
+	color:#333;
+	text-shadow:0 1px 0 white;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	width:35px;
+}
+ul.page-numbers {
+	text-align:right;
+}
+.paging a:hover,.paging a.current,ul.page-numbers li span:hover,ul.page-numbers li a:hover {
+	text-decoration:none;
+	background:#ad1818;
+	border:1px solid #ad1818;
+	text-shadow:none;
+	color:#fff;
+}
+ul.page-numbers li {
+	display:inline-block;
+	list-style:none;
+	vertical-align:middle;
+}
+ul.page-numbers li span,ul.page-numbers li a {
+	font-size:14px;
+	padding:0 10px;
+	height:28px;
+	width:30px;
+	line-height:28px;
+	margin:0;
+	text-align:center;
+	border:1px solid #e5e5e5;
+	position:relative;
+	margin-right:2px;
+	margin-left:2px;
+	border-radius:3px;
+	display:inline-block;
+	font-weight:400;
+}
+.paging a.prev,.paging a.next {
+	font-size:0;
+	position:relative;
+}
+.paging a:hover:before {
+	color:#fff;
+}
+a.next:before {
+	font-family:'FontAwesome';
+	font-size:18px;
+	line-height:28px;
+	content:"\f105";
+	position:absolute;
+	font-weight:300;
+	color:#666;
+	right:10px;
+}
+a.prev:before {
+	font-family:'FontAwesome';
+	font-size:18px;
+	line-height:28px;
+	color:#666;
+	content:"\f104";
+	font-weight:300;
+	left:10px;
+	position:absolute;
+}
+.paging .noneclick {
+	color:#cdcdcd !important;
+	padding:5px 7px;
+	margin:0 5px;
+	border: 1px solid #ccc;
+}
+/*paging*/
+.req_doc_table {
+	width:100%;
+}
+.req_doc_table tr {
+	height:32px;
+}
+.pnCate {
+	padding-left:15px;
+}
+.tdDocMiddle {
+	width:5px;
+}
+.tdDocLeft {
+	width:200px;
+	text-align:right;
+	vertical-align:middle;
+}
+.faqleftadd {
+	background:url(../Images/faq.jpg) no-repeat;
+	width: 15%;
+}
+/*button*/
+.bbutton,.bbuttonBig,.bbButtonBigger {
+	width:95px;
+	min-height:24px;
+	font-size:11px;
+	line-height:20px;
+	border:0;
+	background:url(../Images/qsfButton95.gif) no-repeat #a8d1cc;
+}
+.bbButtonBig {
+	width:120px;
+	background:url(../Images/qsfButton120.gif) no-repeat #a8d1cc;
+}
+.bbButtonBigger {
+	width:150px;
+	background:url(../Images/qsfButton150.gif) no-repeat #a8d1cc;
+}
+.buttonFill {
+	width:95px;
+	padding-bottom:7px;
+	border:0;
+	background:url(../Images/CommitButtonsBgr.gif) no-repeat;
+	text-align:center;
+}
+.exButton {
+	margin-top:11px;
+	margin-left:75px;
+	background:url(../Images/button1.gif) no-repeat;
+	width:122px;
+	height:33px;
+	border:0;
+	color:#cc0066;
+	font-size:11px;
+	text-align:left;
+	padding-left:25px;
+}
+.exButtonImprove {
+	background:url(../Images/button1.gif) no-repeat;
+	width:122px;
+	height:33px;
+	border:0;
+	color:#cc0066;
+	font-size:11px;
+}
+.onclick {
+	cursor:pointer;
+}
+.VerifierText {
+	letter-spacing:13px;
+	width:120px;
+	text-transform:uppercase;
+}
+input.VerifierText {
+	padding-left:8px;
+}
+.cmmbox {
+	box-shadow:inset 0 0 4px #ccc;
+	border:1px solid #A8ACAD;
+}
+.cmmboxarea {
+	border:1px solid #A8ACAD;
+	box-shadow:0 10px 20px rgba(0,0,0,0.16) inset;
+	color:#555;
+	font:12px arial;
+	padding:3px 5px;
+	width:461px;
+	max-width:461px;
+}
+.cmbutton {
+	padding:3px 7px;
+	margin-left:5px;
+	background:#fff;
+	color:#333;
+	border:1px solid #999;
+	text-shadow:0 1px 0 #fff;
+	font-weight:700
+}
+.submitbt {
+	padding:3px 7px;
+	text-decoration:none;
+	background:#c60 url(themes/templates/tongiaocp/images/org-bg.html) repeat-x;
+	border:1px solid #9C4E00;
+	text-shadow:0 1px 0 #9C4E00;
+	color:#fff;
+	font-weight: 700
+}
+/*floating banner*/
+.floating-left {
+	position:absolute;
+	z-index:9999;
+	top:0;
+	left:-165px;
+}
+.floating-right {
+	position:absolute;
+	z-index:9999;
+	top:0;
+	right: -165px;
+}
+/**POPUP***/
+.popup,.popups {
+	padding:20px;
+	display:none;
+	background-color:#fff;
+}
+.popups {
+	width:90%;
+	height:90%;
+}
+.popup .bClose,.popups .bClose {
+	background-color:#2B91AF;
+	color:white;
+	cursor:pointer;
+	display:inline-block;
+	padding:3px 8px;
+	text-align:center;
+	border-radius:7px;
+	font:bold 131% sans-serif;
+	position:absolute;
+	right:-7px;
+	top:-7px;
+}
+.popup .bClose:hover,.popups .bClose:hover {
+	background-color: #000;
+}
+/**POPUP***/

@@ -1,0 +1,118 @@
+body {
+    margin:0;
+}
+#Container {
+    margin-top:2px;
+}
+#Wrapper {
+    width:980px;
+    margin:0 auto;
+    behavior:url(PIE.html);
+    /*hack for IE*/
+}
+#HeaderZone {
+    margin:0;
+    padding:0;
+    behavior:url(PIE.html);
+    /*hack for IE*/
+}
+#Content {
+    padding:0;
+    width:100%;
+    margin:6px 0 0 0;
+    float:left;
+    behavior:url(PIE.html);
+    /*hack for IE*/
+}
+#Content table {
+    border-collapse:collapse;
+    text-align:center;
+    max-width:518px;
+}
+.fullZone {
+    float:left;
+    width:100%;
+}
+#ContentFullZone {
+    /* float:left;width:650px;*/
+}
+#Sidebar {
+    /*width:290px;float:left;*/
+}
+#LeftZone {
+    width:221px;
+    margin-right:12px;
+    float:left;
+}
+#RightZone {
+    width:190px;
+    float:left;
+    margin-right:1px;
+}
+#ContentZone {
+    float:left;
+    margin-right:1px;
+    width:537px !important;
+}
+#FooterZone {
+    clear:both;
+    padding:5px 0px;
+    float:left;
+    line-height:18px;
+    background:transparent;
+    behavior:url('PIE.html');
+    /*hack for IE*/
+}
+#LeftSmallZone {
+    float:left;
+    width:350px;
+}
+#RightSmallZone {
+    float:right;
+    width:580px;
+}
+#RightSmallZone img {
+    width:580px;
+    height:170px;
+    border: none;
+}
+/*fixxxxxxxxxxxxxxxxx*/
+div.menu_fixleft {
+    background:url(images/left.html) no-repeat;
+    width:147px;
+    height:604px;
+    top:0;
+    position:absolute;
+    z-index:9;
+    left:-147px;
+    display:block;
+}
+div.menu_fixright {
+    background:url(images/right.html) no-repeat;
+    width:147px;
+    height:604px;
+    position:absolute;
+    margin-left:960px;
+    top:0;
+    right:-147px;
+    z-index:9;
+    display: block;
+}
+/*** CSS - from bee****/
+#ContentZone table.leftside {
+    margin:0 10px 10px 0;
+}
+#ContentZone table.image {
+    border-collapse:collapse;
+    background:#CCC;
+    width:1%;
+    color:#048;
+}
+#ContentZone table.center {
+    margin-bottom:10px;
+    margin:auto;
+}
+#ContentZone table.rl {
+    text-align:left;
+    margin: 0px;
+}

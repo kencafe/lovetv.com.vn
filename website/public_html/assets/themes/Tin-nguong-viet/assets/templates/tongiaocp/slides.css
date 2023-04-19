@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+/*	Slideshow*/
+#slides {
+	margin:0;
+	border:3px solid #732e09;
+	/*width:380px;*/
+	height:311px;
+	position:relative;
+}
+#slides1 {
+	margin:0;
+	border:3px solid #732e09;
+	width:634px;
+	height:311px;
+	position:relative;
+}
+#slides .slides_container .slide {
+	width:380px;
+	height:310px;
+	overflow:hidden;
+	text-align:center;
+}
+#slides1 .slides_container .slide {
+	width:634px;
+	height:311px;
+	text-align: center;
+}
+/*	Slides container	Important:Set the width of your slides container	Set to display none,prevents content flash*/
+.slides_container {
+	width:380px;
+	overflow:hidden;
+	position:relative;
+	display: none;
+}
+/*	Each slide	Important:Set the width of your slides	If height not specified height will be set by the slide content	Set to display block*/
+.slides_container div.slide {
+	width:380px;
+	height:311px;
+	display: block;
+}
+/*	Next/prev buttons*/
+#slides .next,#slides .prev {
+	position:absolute;
+	top:107px;
+	left:1px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+#slides .next {
+	left: 350px;
+}
+/*	Caption*/
+.slide {
+	position:relative;
+}
+.caption {
+	z-index:500;
+	position:absolute;
+	left:10px;
+	text-shadow:none;
+	bottom:9px;
+	display:inline-block;
+	transform:none;
+	padding:25px 15px 16px;
+	background:rgba(0,0,0,0.4);
+	max-width:45%;
+	border-radius:10px;
+}
+.title-post {
+	padding:8px 0;
+	font-size:20px;
+	line-height:30px;
+	font-family:'Roboto Slab';
+}
+#slides .caption {
+	bottom:8px;
+}
+.caption p a {
+	color:#ffd800;
+}
+#slides .pagination {
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	width:100%;
+	background:#732E09;
+}
+.preBeauty,.nexBeauty {
+	background:url(images/arrowslide.png);
+	width:50px !important;
+	height:143px !important;
+	bottom:40% !important;
+	position:absolute;
+	display:block;
+	z-index:9;
+	opacity:.5;
+	-moz-opacity:.5;
+}
+.preBeauty {
+	left:0px;
+	background-position:0 0;
+}
+.nexBeauty {
+	right:0px;
+	background-position:-50px 0;
+}
+.preBeauty:hover {
+	background-position:0 143px;
+}
+.nexBeauty:hover {
+	background-position: -50px 143px;
+}

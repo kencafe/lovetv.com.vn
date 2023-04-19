@@ -1,0 +1,254 @@
+@media (max-width: 1366px){
+    .login {
+        margin: 30px auto;
+        width: 40%;
+    }
+}
+@media (max-width: 1440px){
+    .login {
+        margin: 30px auto;
+        width: 40%;
+    }
+}
+
+.login {
+    background: rgba(183, 193, 189, 0.11);
+    margin: 30px auto;
+    width: 90%;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+.login input[type="text"], .login input[type="password"] {
+
+    font-size: 14px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    border: 1px solid #eee;
+    margin: 0.8em 0;
+}
+.login .modal-header {
+    text-align: center;
+    background: #ff516b;
+    background: -moz-linear-gradient(135deg, #e21f24 0%,#9157a9 100%);
+    background: -webkit-linear-gradient(135deg, #e21f24 0%,#9157a9 100%);
+    background: linear-gradient(135deg, #e21f24 0%,#9157a9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff516b', endColorstr='#826cfd',GradientType=1 );
+    color: #fff;
+}
+.login .modal-body .form-group label.control-label {
+    width: 20%;
+    font-size: 14px;
+    color: #333333;
+    line-height: 150%;
+    position: relative;
+    margin: 9px 0;
+}
+.login .modal-body .form-group label.control-label, 
+.login .modal-body .form-group .input {
+    display: inline-block;
+    text-align: left;
+}
+#login-form .form-group {
+    display: flex;
+    justify-content: flex-start;
+}
+.login form#login-form {
+    width: 55%;
+    margin: 0 auto;
+}
+.login .modal-body .form-group .input .form-control {
+    min-width: 320px;
+    padding: 8px 15px;
+    box-shadow: none;
+    height: auto;
+    background: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.login .modal-body .form-group .input {
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    flex: 1 0;
+}
+.checkbox, .p-container a {
+    font-size: 0.95em;
+    line-height: 14px;
+    color: #222;
+    cursor: pointer;
+}
+.checkbox {
+    text-align: left;
+    padding-left: 20px;
+}
+.p-container a {
+    text-align: right;
+}
+.p-container a:hover{
+    text-decoration: underline !important;
+    color: red;
+}
+.p-container a, .p-container .checkbox {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.p-container a{
+    text-align: right;
+}
+.p-container {
+    display: inline-block;
+    width: 100%;
+}
+.button-login, a.signup {
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5em 0.8em;
+    width: 35%;
+    border: none;
+    font-weight: 600;
+    background: #8821E0;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    border-bottom: 2px solid #E51D5F;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+
+}
+.button-login:hover, a.signup:hover,
+.button-login:focus, a.signup:focus{
+    background: #E51D5F;
+    border-bottom-color: #8821E0;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    color: #fff;
+}
+.button-login:hover, .button-login:focus{
+    background: #3b5fa4;
+}
+.login{
+    text-align: center;
+}
+.modal-body.login-body {
+    padding: 30px 15px;
+}
+h3.tilte-login {
+    margin: 0;
+    font-size: 24px;
+}
+.checkbox input[type="checkbox"] {
+    top: -4px;
+}
+.submit {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+p.error-sign-in-message {
+    color: red;
+    margin-bottom: 20px;
+}
+@media (max-width: 1199px){
+    .login form#login-form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 991px){
+    .login form#login-form {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 900px){
+    .login{
+        width: 95%;
+    }
+}
+@media (max-width: 840px){
+    .login form#login-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px){
+    .login form#login-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 580px){
+    .login form#login-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #login-form .form-group {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .login .modal-body .form-group label.control-label {
+        width: 100%;
+    }
+    .login .modal-body .form-group .input {
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+        flex: 1 0;
+    }
+    .login .modal-body .form-group .input .form-control {
+        min-width: auto;
+    }
+}
+@media (max-width: 480px){
+    .login form#login-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .login {
+        background: rgba(183, 193, 189, 0.11);
+        margin: 10px auto;
+    }
+    .option-login {
+        top: 110px;
+    }
+}
+
+@media (max-width: 375px){
+    h3.tilte-login {
+        margin: 0;
+        font-size: 20px;
+    }
+    .button-login, a.signup{
+        flex-basis: 100%;
+        margin: 7px 30px;
+    }
+    .p-container a, .p-container .checkbox {
+        width: 100%;
+        float: none;
+        text-align: left;
+    }
+    .p-container .checkbox{
+        margin-bottom: 5px;
+
+    }
+
+}

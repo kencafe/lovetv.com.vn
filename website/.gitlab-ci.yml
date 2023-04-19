@@ -1,0 +1,138 @@
+stages:
+    - update
+    - test
+    - build
+    - deploy
+update:
+    stage: update
+    variables:
+        GIT_STRATEGY: fetch
+    before_script:
+        - echo "============|| Check Environment ||============"
+        - pwd
+        - whoami
+        - cat /etc/centos-release
+        - php -v
+        - composer --version
+        - git --version
+        - rsync --version
+        - date
+        - ifconfig
+    script:
+        - whoami
+        - pwd
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LoveTV-Website&stages=update'
+        - echo "============|| UPDATED FINISHED ||============"
+    only:
+        - master
+test:
+    stage: test
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - pwd
+        - php -v
+    script:
+        - whoami
+        - pwd
+        - ls -la
+        - sudo netstat -ltnp # Kiem tra cac port dang mo tren server
+        - php tests/env_test.php  # Kiem tra ket noi toi Database va Extension
+        - php config/flush_opcache.php  # Flush OPCache
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LoveTV-Website&stages=test'
+        - echo "============|| TEST FINISHED ||============"
+    only:
+        - master
+build:
+    stage: build
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - echo "============|| Tien hanh build nao ||============"
+        - pwd
+        - ls -la
+    script:
+        - whoami
+        - composer --version
+        - composer validate
+        - composer install --no-dev --ignore-platform-reqs --no-plugins --no-scripts
+        - ls -la
+        - sudo chown -R gitlab-runner:gitlab-runner vendor/
+        - ls -la
+        - php -v
+        - php tests/env_test.php  # Kiem tra ket noi toi Database va Extension
+        - php config/flush_opcache.php  # Flush OPCache
+        - pwd
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LoveTV-Website&stages=build'
+        - echo "============|| BUILD FINISHED ||============"
+    only:
+        - master
+deploy:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - echo "============|| Check Environment ||============"
+        - pwd
+        - ls -la
+    script:
+        - whoami
+        - echo "============|| Deploy to production ||============"
+        - echo $SERVER_PATH_TO_DEPLOY
+        #- echo "============|| Kiem tra va tao cac thu muc can thiet ||============"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/application/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/vendor/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/system/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/public/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/config/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/storage/"
+        - echo "============|| Deploy cac file can thiet vao he thong ||============"
+        - pwd
+        - rsync --version
+        - sudo rsync -rvh application/   "$SERVER_PATH_TO_DEPLOY/application/"
+        - sudo rsync -rvh config/    "$SERVER_PATH_TO_DEPLOY/config/"
+        - sudo rsync -rvh public_html/    "$SERVER_PATH_TO_DEPLOY/public_html/"
+        - sudo rsync -rvh .production.index.php    "$SERVER_PATH_TO_DEPLOY/public_html/index.php"
+        - sudo rsync -rvh storage/    "$SERVER_PATH_TO_DEPLOY/storage/"
+        - sudo rsync -rvh system/    "$SERVER_PATH_TO_DEPLOY/system/"
+        - sudo rsync -rvh vendor/    "$SERVER_PATH_TO_DEPLOY/vendor/"
+        - sudo rsync -rvh README.md    "$SERVER_PATH_TO_DEPLOY/README.md"
+        - echo "============|| Deploy file OPCACHE ||============"
+        - PUBLIC_HTML_DIR="$SERVER_PATH_TO_DEPLOY/public_html/"
+        - echo $PUBLIC_HTML_DIR
+        - RANDOM_NAME_OPCACHE=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 36)
+        - echo $RANDOM_NAME_OPCACHE
+        - sudo rsync -rvh config/flush_opcache.php ${PUBLIC_HTML_DIR}${RANDOM_NAME_OPCACHE}.php
+        - echo "============|| Chuyen vao thu muc production ||============"
+        - cd "$SERVER_PATH_TO_DEPLOY"
+        - pwd
+        - ls -la
+        - echo "============|| Phan quyen cac thu muc can thiet de chay ||============"
+        - sudo chown -R root:root application/
+        - sudo chown -R root:root config/
+        - sudo chown -R root:root system/
+        - sudo chown -R root:root vendor/
+        - sudo chown -R root:root README.md
+        - sudo chown -R apache:apache storage/
+        - sudo chown -R apache:apache application/cache/
+        - sudo chown -R apache:apache application/logs/
+        - sudo chown -R apache:apache application/logs-data/
+        - sudo chown -R apache:apache public_html/storage/
+        - sudo chown -R root:root public_html/assets/
+        - sudo chown -R root:root public_html/index.php
+        - sudo chown -R root:root public_html/robots.txt
+        - sudo chown -R root:root public_html/.htaccess
+        - pwd
+        - ls -la
+        - echo "============|| Clean OPCACHE ||============"
+        - echo "http://lovetv.com.vn/${RANDOM_NAME_OPCACHE}.php"
+        - curl --location --request GET "http://lovetv.com.vn/${RANDOM_NAME_OPCACHE}.php"
+        - echo ${PUBLIC_HTML_DIR}${RANDOM_NAME_OPCACHE}.php
+        - sudo rm ${PUBLIC_HTML_DIR}${RANDOM_NAME_OPCACHE}.php
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LoveTV-Website&stages=deploy'
+        - echo "============|| DEPLOY FINISHED ||============"
+    only:
+        - master

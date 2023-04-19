@@ -1,0 +1,28 @@
+{
+    "name": "PKDTD_Team_Vina_LoveTV/project_api_services_vas_cloud_lovetv_2018",
+    "description": "Project API Services VasCloud LoveTV 2018",
+    "keywords": [
+        "api service",
+        "pkd",
+        "CodeIgniter"
+    ],
+    "type": "project",
+    "homepage": "http://saogala.vn/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Nguyen An Hung",
+            "email": "dev@nguyenanhung.com"
+        }
+    ],
+    "require": {
+        "nguyenanhung/vn-telco-phonenumber": "^1.1",
+        "phpseclib/phpseclib": "^2.0",
+        "phpoffice/phpexcel": "^1.8",
+        "nguyenanhung/td-vas": "^0.2"
+    },
+    "require-dev": {
+        "kint-php/kint": "^2.2",
+        "fzaninotto/faker": "^1.7"
+    }
+}

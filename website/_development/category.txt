@@ -1,0 +1,135 @@
+'lovetv-chuyen-yeu' => [
+                               // Check xem tin bài với từng category
+                               'check_roles'        => TRUE,
+                               'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                           ],
+'lovetv-gia-dinh' => [
+                             // Check xem tin bài với từng category
+                             'check_roles'        => TRUE,
+                             'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                         ],
+'lovetv-thieu-nhi' => [
+                              // Check xem tin bài với từng category
+                              'check_roles'        => TRUE,
+                              'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                          ],
+'lovetv-du-lich-kham-pha' => [
+                                     // Check xem tin bài với từng category
+                                     'check_roles'        => TRUE,
+                                     'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                 ],
+'lovetv-lam-dep' => [
+                            // Check xem tin bài với từng category
+                            'check_roles'        => TRUE,
+                            'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                        ],
+'lovetv-giai-tri' => [
+                             // Check xem tin bài với từng category
+                             'check_roles'        => TRUE,
+                             'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                         ],
+'lovetv-ban-muon-hen-ho' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-vo-chong-son' => [
+                                 // Check xem tin bài với từng category
+                                 'check_roles'        => TRUE,
+                                 'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                             ],
+'lovetv-ket-noi-trai-tim' => [
+                                     // Check xem tin bài với từng category
+                                     'check_roles'        => TRUE,
+                                     'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                 ],
+'lovetv-cha-con-hop-suc' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-gia-dinh-tai-tu' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-con-da-lon-khon' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-uoc-mo-cua-em' => [
+                                  // Check xem tin bài với từng category
+                                  'check_roles'        => TRUE,
+                                  'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                              ],
+'lovetv-24-gio-doi-nha' => [
+                                   // Check xem tin bài với từng category
+                                   'check_roles'        => TRUE,
+                                   'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                               ],
+'lovetv-ban-duong-hop-ly' => [
+                                     // Check xem tin bài với từng category
+                                     'check_roles'        => TRUE,
+                                     'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                 ],
+'lovetv-lu-khach-24h' => [
+                                 // Check xem tin bài với từng category
+                                 'check_roles'        => TRUE,
+                                 'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                             ],
+'lovetv-du-lich-ki-thu' => [
+                                   // Check xem tin bài với từng category
+                                   'check_roles'        => TRUE,
+                                   'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                               ],
+'lovetv-ve-truong' => [
+                              // Check xem tin bài với từng category
+                              'check_roles'        => TRUE,
+                              'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                          ],
+'lovetv-biet-doi-x6' => [
+                                // Check xem tin bài với từng category
+                                'check_roles'        => TRUE,
+                                'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                            ],
+'lovetv-ban-co-thuc-tai' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-bay-gio-lam-sao' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-nghe-si-thu-tai' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-camera-can-canh' => [
+                                    // Check xem tin bài với từng category
+                                    'check_roles'        => TRUE,
+                                    'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                ],
+'lovetv-me-chong-nang-dau' => [
+                                      // Check xem tin bài với từng category
+                                      'check_roles'        => TRUE,
+                                      'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                  ],
+'lovetv-nghin-le-mot-chuyen' => [
+                                        // Check xem tin bài với từng category
+                                        'check_roles'        => TRUE,
+                                        'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                    ],
+'lovetv-yeu-la-chon' => [
+                                // Check xem tin bài với từng category
+                                'check_roles'        => TRUE,
+                                'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                            ],
+'lovetv-guong-mat-phu-the' => [
+                                      // Check xem tin bài với từng category
+                                      'check_roles'        => TRUE,
+                                      'listPackageAllowed' => ['LOVETV_NGAY', 'LOVETV_TUAN', 'LTV1', 'LTV30', 'LTV7', 'NGAY', 'TUAN', 'THANG', 'L1', 'L7', 'L30']
+                                  ],

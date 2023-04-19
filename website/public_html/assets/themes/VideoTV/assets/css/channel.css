@@ -1,0 +1,8 @@
+.channels-page .channels-block.section-padding {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.video-block.section-padding.slider-video {
+    border: 0;
+}

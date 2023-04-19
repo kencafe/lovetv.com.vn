@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS `[[is_tables_name]]` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `shortcode` int(4) DEFAULT '9006' COMMENT 'Đầi số gửi Mt',
+  `msisdn` varchar(15) DEFAULT NULL COMMENT 'SĐT tham gia tương tác',
+  `mo` varchar(63) DEFAULT NULL COMMENT 'Nội dung MO',
+  `mt` varchar(500) DEFAULT NULL COMMENT 'Mt Msg',
+  `status` tinyint(4) unsigned DEFAULT '1' COMMENT '0: Thành công, 1: Thất bại, 2: anh Văn gửi MT',
+  `response` varchar(255) DEFAULT NULL COMMENT 'Response request',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note ghi nhận từ nhà mạng',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `subCode` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `msisdn` (`msisdn`),
+  KEY `mo` (`mo`),
+  KEY `status` (`status`),
+  KEY `created_at` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Bảng lưu trữ SMS Log';

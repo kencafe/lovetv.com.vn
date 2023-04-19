@@ -1,0 +1,24 @@
+/** @Author:thaodt97* @Date:2018-07-20 14:28:34* @Last Modified by:thaodt97* @Last Modified time:2018-07-20 16:37:20*/
+.list_header {
+    background:url(../images/bg-middle1.jpg) no-repeat scroll 0 32px transparent !important;
+    padding: 10px 0 5px 10px;
+}
+col-l {
+    /* width:655px;*/
+    text-align:justify;
+    background:none !important;
+}
+h2.title_box {
+    font-weight:700;
+    height:60px;
+    overflow:hidden;
+    font-size:16px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.listtxt h2.title_box {
+    height:40px;
+}
+h4.otherheader {
+    font-weight: 600;
+}

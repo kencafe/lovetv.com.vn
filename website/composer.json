@@ -1,0 +1,67 @@
+{
+    "name": "pkt-tung-van-du-an-lovetv/project-lovetv-website",
+    "description": "Project - LoveTV - Website",
+    "keywords": [
+        "news",
+        "site",
+        "portal",
+        "CodeIgniter"
+    ],
+    "type": "project",
+    "homepage": "https://gitlab.com/pkt-tung-van-du-an-lovetv/project-lovetv-website",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Nguyen An Hung",
+            "email": "dev@nguyenanhung.com",
+            "homepage": "https://nguyenanhung.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/mantis-connector"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/vn-telco-detect"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/database"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/td-send-sms"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/td-gameshow"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/td-vas"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/td-vietnamobile-sdk"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/nguyenanhung/web-builder-sdk"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "nguyenanhung/td-vas": "^2.0",
+        "nguyenanhung/web-builder-sdk": "^2.0",
+        "nguyenanhung/td-vietnamobile-sdk": "^2.0",
+        "amnuts/opcache-gui": "^3.0"
+    },
+    "require-dev": {
+        "kint-php/kint": "^3.0"
+    }
+}

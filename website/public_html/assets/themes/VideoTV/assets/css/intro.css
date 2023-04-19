@@ -1,0 +1,97 @@
+.info-block.section-padding {
+	-webkit-box-shadow: 0px 2px 3px -3px rgba(0, 0, 0, .2);
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .2);
+	padding: 30px;
+	background: #fff;
+	margin: 15px 0 30px;
+}
+.info-block .heading-page, .info-block .sub-heading {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 7px;
+}
+.info-block h1{
+	font-size: 30px;
+}
+.info-block h2{
+	font-size: 24px;
+}
+.info-block h3{
+	font-size: 20px;
+}
+.info-block h4{
+	font-size: 18px;
+}
+.info-block h5{
+	font-size: 16px;
+}
+.info-block h6{
+	font-size: 14px;
+}
+.how-use > ul{
+	padding-left: 30px;
+}
+.how-use > ul >li {
+	list-style: none;
+	padding-left: 20px;
+	position: relative;
+}
+.how-use > ul >li:before {
+	display: inline-block;
+	height: 40px;
+	width: 3px;
+	content: "";
+	position: absolute;
+	background-color: #6ca0b6;
+	left: 0px;
+	top: 5px;
+}
+
+@media (max-width: 1199px){
+	.how-use > ul  {
+		padding-left: 20px;
+	}
+}
+@media (max-width: 640px){
+	.how-use > ul  {
+		padding-left: 15px;
+	}
+}
+
+@media (max-width: 480px){
+	.info-block.section-padding {
+		padding: 30px 15px;
+	}
+	.how-use > ul  {
+		padding-left: 10px;
+	}
+	.how-use > ul >li {
+		padding-left: 15px;
+	}
+	.info-block h1{
+		font-size: 28px;
+	}
+	.info-block h2{
+		font-size: 22px;
+	}
+	.info-block h3{
+		font-size: 18px;
+	}
+	.info-block h4{
+		font-size: 16px;
+	}
+	.info-block h5{
+		font-size: 14px;
+	}
+	.info-block h6{
+		font-size: 14px;
+	}
+}
+@media (max-width: 375px){
+	.how-use > ul >li {
+		padding-left: 15px;
+	}
+	.how-use > ul  {
+		padding-left: 10px;
+	}
+}

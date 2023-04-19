@@ -1,0 +1,1 @@
+Thông báo hiển thi khi đăng ký dịch vụ thất bại

@@ -1,0 +1,254 @@
+/*info account*/
+.package-block{
+
+  padding: 0 15px;
+}
+.hrInfAcc1 {
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.typeInfAcc {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 600;
+}
+.textGrayInf {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #a2a0a0;
+}
+.textWhiteInf {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.addPack {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.textWhiteInf img {
+  cursor: pointer;
+  height: 21px;
+  margin-right:5px
+}
+.textWhiteInf a{
+  color: #222;
+}
+.btnLogout {
+  /*margin-top: 5%;*/
+  width: 15%;
+  padding: 10px 45px 10px 10px;
+  background-color: transparent;
+  border: 1px solid #655f5f;
+  color: #222;
+  font-size: 16px;
+  border-radius: 6px;
+  float: right;
+  margin-right: 1%;
+}
+.btnLogout:hover {
+  background-color: #3AC882;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.btnLogout:before {
+  background: url(images/icon_logout.png) no-repeat 73% 50%;
+  background-size: 20px;
+  margin-left: 5px;
+}
+.btnLogout:before {
+  font-size: 28px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.update-info{
+  color:#2f6fa7;
+  background: transparent;
+}
+.update-info:hover, .update-info:focus, 
+.update-info:active:focus, 
+.btn .btn-info:active:focus, .btn .btn-info:focus{
+  text-decoration: underline;
+  color: #2f6fa7;
+  outline: none;
+  box-shadow: none;
+}
+.vertical-align-center .modal-header .modal-title{
+  text-align: center;
+}
+.update-info i{
+  padding-right: 5px;
+}
+.changePass {
+  text-align: right;
+}
+table#list_packages {
+  margin-top: -8px;
+}
+table#list_packages th {
+  color: #524d4d;
+}
+table#list_packages td{
+  color: #222;
+}
+.viewerAll p{
+  display:inline;
+  cursor: pointer;
+}
+ /* #tab2danger, #packages{
+    display: none;
+    }*/
+    .block#infor-account{
+      border: none;
+    }
+    #infor-account .nav-tabs {
+      border-bottom: none;
+    }
+    /*style modal*/
+    #changePassModal .modal-title{
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    #changePassModal .form-group label {
+     position: unset; 
+     /* left: 0; */
+     /* top: 50%; */
+     transform: translateY(-10%);
+     width: unset; 
+   }
+   #changePassModal .form-group input:focus {
+    border-color: unset;
+    border-bottom: #9000cc;
+  }
+  #changePassModal .modal-footer{
+    text-align: center;
+    border-top: unset;
+  }
+  /*end style modal*/
+
+
+/*.display_mobie p{
+  color: #a2a0a0;
+  line-height: 25px;*/
+  /*margin-left: -15px;*/
+  /*}*/
+  .display_mobie .notice{
+    color: #fe0000;
+  }
+  .display_mobie .unset-package {
+    margin-top: 5px;
+  }
+  @media only screen and (max-width: 992px){
+    .btnLogout{
+      width: unset;
+    }
+  }
+  @media only screen and (min-width: 767px){
+    .display_mobie{
+      display: none;
+    }
+    #display_mobie{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 991px){
+    .package-block.section-padding .typeInfAcc {
+      width: 100%;
+      margin-bottom: 20px !important;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .display_pc{
+      display: none;
+    }
+  /*.textWhiteInf img {
+    margin-left: -15px;
+    }*/
+    .btnLogout{
+      width: unset;
+    }
+    .btnLogout:before {
+
+    }
+    div#editPass .vertical-alignment-helper {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media only screen and (max-width: 384px){
+    .vertical-align-center .modal-body form#changePassInfo {
+      padding: 0 0px;
+    }
+    .changePass {
+      text-align: left;
+      width: 100%;
+      margin-left: -15px;
+    }
+    .display_mobie .col-xs-3 {
+      padding-left: 0;
+      padding-right: 5px;
+    }
+  }
+  .package-block.section-padding{
+    border-bottom: 1px solid #ebedf0;
+    margin-bottom: 20px;
+  }
+  .package-block.section-padding:last-child{
+    border-bottom: 0;
+  }
+  .vertical-align-center .modal-body label {
+    color: #333;
+    font-size: 14px;
+  }
+  .vertical-align-center .modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .vertical-align-center .modal-body{
+    padding: 15px 20px 5px;
+  }
+  .vertical-align-center .modal-body form#changePassInfo {
+    padding: 0 20px;
+  }
+  .vertical-align-center .modal-footer{
+    text-align: center;
+  }
+  .vertical-align-center .modal-footer button{
+    float: none;
+
+  }
+  .btn-updateInfoPass{
+    background: #254f8e;
+  }
+  .btn_close{
+    background: red;
+  }
+
+  .unset-package {
+    padding: 1px 15px;
+    background: #2f6fa7c7;
+  }
+  .addPack a {
+    border: 1px solid #939393;
+    border-image: initial;
+    background: #e4e4e4;
+    padding: 1px 5px;
+  }
+  .viewerAll i, .addPack i{
+    padding-right: 5px;
+  } 

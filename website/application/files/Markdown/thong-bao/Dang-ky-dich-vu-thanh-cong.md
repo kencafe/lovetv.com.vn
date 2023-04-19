@@ -1,0 +1,1 @@
+Chúc mừng bạn đăng ký dịch vụ thành công, hệ thống sẽ tự chuyển hướng về trang chủ sau 30s!

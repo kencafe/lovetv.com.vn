@@ -1,0 +1,111 @@
+stages:
+    - update
+    - test
+    - build
+    - deploy
+update:
+    stage: update
+    variables:
+        GIT_STRATEGY: fetch
+    before_script:
+        - echo "============|| Check Environment ||============"
+        - pwd
+        - whoami
+        - cat /etc/centos-release
+        - php -v
+        - composer --version
+        - git --version
+        - rsync --version
+        - date
+        - ifconfig
+    script:
+        - whoami
+        - pwd
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LOVETV-VASCLOUD&stages=update'
+        - echo "============|| UPDATED FINISHED ||============"
+    only:
+        - master
+test:
+    stage: test
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - pwd
+        - php -v
+    script:
+        - whoami
+        - pwd
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LOVETV-VASCLOUD&stages=test'
+        - echo "============|| TEST FINISHED ||============"
+    only:
+        - master
+build:
+    stage: build
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - echo "============|| Tien hanh build nao ||============"
+        - pwd
+        - ls -la
+    script:
+        - whoami
+        - composer --version
+        - composer validate
+        - composer install --no-dev --ignore-platform-reqs --no-plugins --no-scripts --no-interaction --no-progress
+        - ls -la
+        - sudo chown -R gitlab-runner:gitlab-runner vendor/
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LOVETV-VASCLOUD&stages=build'
+        - echo "============|| BUILD FINISHED ||============"
+    only:
+        - master
+deploy:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - echo "============|| Check Environment ||============"
+        - whoami
+        - pwd
+        - ls -la
+    script:
+        - whoami
+        - echo "============|| Deploy to production ||============"
+        - echo $SERVER_PATH_TO_DEPLOY
+        #- echo "============|| Kiem tra va tao cac thu muc can thiet ||============"
+        # Trong TH deploy moi thi un comment nhung dong duoi day
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/application/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/config/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/public/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/storage/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/system/"
+        #- sudo mkdir -p "$SERVER_PATH_TO_DEPLOY/vendor/"
+        - echo "============|| Deploy cac file can thiet vao he thong ||============"
+        - pwd
+        - rsync --version
+        - sudo rsync -rvh application/   "$SERVER_PATH_TO_DEPLOY/application/"
+        - sudo rsync -rvh bash/   "$SERVER_PATH_TO_DEPLOY/bash/"
+        - sudo rsync -rvh config/   "$SERVER_PATH_TO_DEPLOY/config/"
+        - sudo rsync -rvh public/    "$SERVER_PATH_TO_DEPLOY/public/"
+        - sudo rsync -rvh .production.index.php    "$SERVER_PATH_TO_DEPLOY/public/index.php"
+        - sudo rsync -rvh storage/    "$SERVER_PATH_TO_DEPLOY/storage/"
+        - sudo rsync -rvh system/    "$SERVER_PATH_TO_DEPLOY/system/"
+        - sudo rsync -rvh vendor/    "$SERVER_PATH_TO_DEPLOY/vendor/"
+        - sudo rsync -rvh README.md    "$SERVER_PATH_TO_DEPLOY/README.md"
+        - echo "============|| Chuyen vao thu muc production ||============"
+        - cd "$SERVER_PATH_TO_DEPLOY"
+        - pwd
+        - ls -la
+        - echo "============|| Phan quyen cac thu muc can thiet de chay ||============"
+        - sudo chown -R apache:apache $SERVER_PATH_TO_DEPLOY
+        - sudo chmod -R 0777 storage/
+        - sudo chmod -R 0777 application/logs
+        - sudo chmod -R 0777 application/logs-data
+        - pwd
+        - ls -la
+        - curl --location --request GET 'https://nguyenanhung.com/monitor/notification/ci_cd_success?project=LOVETV-VASCLOUD&stages=deploy'
+        - echo "============|| DEPLOY FINISHED ||============"
+    only:
+        - master

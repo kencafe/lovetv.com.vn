@@ -1,0 +1,32 @@
+.owl-carousel-video .owl-item {
+   
+    padding-bottom: 10px;
+}
+.owl-carousel-video {
+  	float: left;
+}
+.owl-carousel-video .owl-nav button.owl-prev {
+    top: -30px;
+    right: 0;
+    margin-right: 40px;
+}
+.owl-carousel-video .owl-nav button.owl-next {
+    top: -30px;
+    right: 15px;
+}
+.owl-carousel.owl-carousel-video {
+    padding-top: 15px;
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+}
+.owl-carousel-video .owl-nav button{
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 0;
+	font-size: 18px !important;
+}
+.owl-carousel-video.owl-carousel .owl-item{
+    padding-left: 15px;
+    padding-right: 15px;
+}

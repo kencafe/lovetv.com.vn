@@ -1,0 +1,65 @@
+.horizontal-list-renderer .overlays {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background-color: hsla(0, 0%, 6.7%, .8);
+    color: hsla(0, 0%, 100%, .8);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.horizontal-list-renderer .video-card-image a:before,
+.horizontal-list-renderer .video-card-image a:after{
+	display: none !important;
+}
+.overlays span {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.overlays i {
+    position: absolute;
+    padding-top: 25px;
+}
+.horizontal-list-renderer .hover-overlays {
+    position: absolute;
+    opacity: 0;
+    color: hsla(0, 0%, 100%, .8);
+    background-color: hsla(0, 0%, 6.7%, .8);
+    text-align: center;
+    transition: opacity 0.3s;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .007px;
+    text-transform: uppercase;
+}
+.horizontal-list-renderer .hover-overlays i{
+    margin-right: 5px;
+}
+.horizontal-list-renderer .video-card:hover .hover-overlays {
+    opacity: 1;
+}
+@media (max-width: 375px){
+    .horizontal-list-renderer .overlays {
+        font-size: 16px
+    }
+}

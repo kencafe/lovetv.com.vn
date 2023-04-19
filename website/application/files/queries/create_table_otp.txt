@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `[[is_tables_name]]` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `serviceId` varchar(36) DEFAULT NULL COMMENT 'This is ServiceId',
+  `otpId` varchar(36) DEFAULT NULL COMMENT 'YmdHis + random 10 số',
+  `otpCode` int(6) DEFAULT NULL COMMENT 'Mã OTP: 1 chuỗi 6 số',
+  `otpTime` datetime DEFAULT NULL COMMENT 'Thời gian tạo OTP',
+  `expireTime` datetime DEFAULT NULL COMMENT 'Thời gian hết hạn OTP',
+  `status` tinyint(1) DEFAULT '0' COMMENT 'Trạng thái: 0 = Mới tạo, 1: Đã sử dụng',
+  `state` tinyint(4) DEFAULT '0' COMMENT 'Nguồn sử dụng OTP: 0: Đăng ký dịch vụ',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `logs` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `otpId` (`otpId`),
+  KEY `serviceId` (`serviceId`),
+  KEY `otpCode` (`otpCode`),
+  KEY `expireTime` (`expireTime`),
+  KEY `status` (`status`),
+  KEY `otpId_idx` (`otpId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Bảng lưu trữ mã OTP';

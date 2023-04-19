@@ -1,0 +1,217 @@
+﻿#MediaPlayer {
+	margin-left: 20px;
+	width: 100%;
+}
+
+#MediaPlayer .videocontent { }
+
+/*
+#MediaPlayer .videoheader
+{height:4px;overflow:hidden;background:url(../Images/Scroll/corner_wire_TR_bg.gif) 100% 0 repeat-x;}
+#MediaPlayer .videoheader div
+{height:4px;width:4px;background:url(../Images/Scroll/corner_wire_TL.gif) 0 0 no-repeat;}
+#MediaPlayer .videofooter
+{height:4px;overflow:hidden;background:url(../Images/Scroll/corner_wire_BR._bg.gif) 100% 0 no-repeat;}
+#MediaPlayer .videofooter div
+{height:4px;width:4px;background:url(../Images/Scroll/corner_wire_BL.gif) 0 0 no-repeat;}
+*/
+/**/
+
+#divMediaContent {
+	color: #121212;
+	height: 100px;
+	margin-top: 5px;
+}
+
+#divMediaContent .left {
+	width: 40%;
+	float: left;
+	padding-top: 10px;
+	border-right: solid 1px #ccc;
+}
+
+#divMediaContent .right {
+	width: 50%;
+	float: left;
+	padding-top: 10px;
+}
+
+#divMediaContent .right .contentright {
+	padding: 0 5px 5px 10px;
+	font-weight: bold;
+}
+
+#divMediaContent .left .contentleft { padding: 0 5px 5px 10px; }
+
+#divMediaContent .videotitle {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#divMediaContent .videodes { color: #898989; }
+
+#divMediaContent .source {
+	color: green;
+	font-weight: normal;
+}
+
+#divMediaContent .time {
+	font-size: 11px;
+	font-weight: normal;
+}
+
+
+.listvideo { background-color: Transparent; }
+
+.listvideo .cnnMpVideo,
+.listvideo .cnnMpVideoSelected
+{
+	float: left;
+	width: 120px;
+	height: 130px;
+	margin-right: 11px;
+	margin-bottom: 20px;
+	position: relative;
+	background: url('../Images/video/video_bg_gray.gif') no-repeat;
+}
+
+.listvideo .cnnMpVideo:hover,
+.listvideo .cnnMpVideoSelected
+{ background: url('../Images/video/video_bg_red.gif') no-repeat; }
+
+.listvideo .cnnMpVideo img,
+.listvideo .cnnMpVideoSelected img
+{
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	width: 112px;
+	height: 80px;
+}
+
+.listvideo .cnnMpVideo p,
+.listvideo .cnnMpVideoSelected p
+{
+	position: absolute;
+	top: 90px;
+	left: 5px;
+	padding: 0;
+	margin: 0;
+	font-size: 10px;
+	padding-right: 3px;
+	line-height: 11px;
+	color: #949494;
+	font-weight: normal;
+}
+
+.listvideo .cnnMpVideo p a,
+.listvideo .cnnMpVideoSelected p a
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #164900;
+}
+
+.listvideo .cnnMpVideo p a:hover,
+.listvideo .cnnMpVideoSelected p a:hover
+{
+	text-decoration: none;
+	color: #fe5b00;
+}
+
+#channelFrame {
+	height: 450px;
+	width: 98%;
+	border: none;
+	background-color: Transparent;
+	border: solid 1px #ccc;
+}
+
+.videotab {
+	border-collapse: collapse;
+	width: auto;
+	margin-left: 8px;
+	margin-top: 10px;
+}
+
+.videotab div {
+	font-weight: bold;
+	padding: 3px;
+	margin-right: 2px;
+}
+
+.videotab td { width: auto; }
+
+.video_tabcontrol_tab_unsel
+{
+	border: solid 1px #ccc;
+	border-bottom: none;
+}
+
+.video_tabcontrol_tab_unsel div { }
+
+.video_tabcontrol_tab_sel { }
+
+.video_tabcontrol_tab_sel div { }
+
+.video_tabcontrol_tab_unsel:hover,
+.video_tabcontrol_tab_sel:hover,
+.video_tabcontrol_tab_unsel_over,
+.video_tabcontrol_tab_sel
+{
+	cursor: pointer;
+	border: solid 1px #ccc;
+	background-color: #2e9900;
+	color: #fff;
+	border-bottom: none;
+}
+
+
+/*------------ Box Grey -----------------------------*/
+
+.blockplayer {
+	width: 98%;
+	float: left;
+}
+
+.blockplayer .myBoxContent
+{
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+}
+
+.blockplayer .myBoxHeader
+{
+	height: 4px;
+	overflow: hidden;
+	background: url(../Images/video/corner_wire_TR_bg.gif) 100% 0 repeat-x;
+}
+
+.blockplayer .myBoxHeader div
+{
+	height: 4px;
+	width: 4px;
+	background: #fff url(../Images/video/corner_wire_TL.gif) 0 0 no-repeat;
+}
+
+.blockplayer .myBoxFooter
+{
+	height: 4px;
+	overflow: hidden;
+	background: url(../Images/video/corner_wire_BR.gif) 100% 0 no-repeat;
+}
+
+.blockplayer .myBoxFooter div
+{
+	height: 4px;
+	width: 4px;
+	background: #fff url(../Images/video/corner_wire_BL.gif) 0 0 no-repeat;
+}
+
+.blockplayer .myBoxHeaderText
+{
+	font: bold 15px tahoma;
+	line-height: 30px;
+	color: #37cac6;
+	text-decoration: none;
+}
